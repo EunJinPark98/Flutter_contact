@@ -10,9 +10,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Center(
-        child: Container( width: 50, height: 50, color: Colors.blue )
-      )
+      home: Scaffold(
+        appBar: AppBar(title: Text('상단')),
+        body: SizedBox(
+          child: Text('중앙')
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: SizedBox(
+            child: Row(
+              children: [
+                Text('하단1'),
+                Text('하단2'),
+                Text('하단3'),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
